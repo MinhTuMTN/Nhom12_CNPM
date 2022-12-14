@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="893.0" prefWidth="1306.0" stylesheets="@CSSManager.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.manager.MainMenuController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="893.0" prefWidth="140.0" spacing="3.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton id="btnCaTruc" fx:id="btnCaTruc" contentDisplay="TOP" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Quản lý&#10;ca làm việc" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_monday_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnLuong" contentDisplay="TOP" layoutX="10.0" layoutY="345.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Tính lương" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_Money_Bag_Pounds_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnTaiKhoan" contentDisplay="TOP" layoutX="10.0" layoutY="406.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Quản lý&#10;tài khoản" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_account_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnBan" contentDisplay="TOP" layoutX="10.0" layoutY="222.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Quản lý bàn" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_coffee_table_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnNhanVien" contentDisplay="TOP" layoutX="10.0" layoutY="529.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Quản lý&#10;nhân viên" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_conference_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnMonAn" contentDisplay="TOP" layoutX="10.0" layoutY="591.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Quản lý&#10;món ăn" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_noodles_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnThongKe" contentDisplay="TOP" layoutX="10.0" layoutY="652.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Thống kê" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/icons8_overview_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="866.0" prefWidth="1125.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutX="23.0" orientation="VERTICAL" prefHeight="792.0" prefWidth="0.0" style="-fx-background-color: #ff4f81;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="pnMain" layoutX="6.0" prefHeight="862.0" prefWidth="1133.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

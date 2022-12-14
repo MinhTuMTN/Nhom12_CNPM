@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1185.0" stylesheets="@CSSCashier.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.cashier.MainMenuController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="780.0" prefWidth="121.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton id="btnCaTruc" fx:id="btnTiepNhan" contentDisplay="TOP" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Tiếp nhận" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/task_completed_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnThanhToan" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Thanh toán" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/cash_in_hand_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnCaTruc" contentDisplay="TOP" layoutX="10.0" layoutY="410.0" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Đăng ký ca trực" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/calendar_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="780.0" prefWidth="1040.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutX="68.0" layoutY="83.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ff4f81;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="pnMain" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

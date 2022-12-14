@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="776.0" prefWidth="1457.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.cook.ThucHienDonHangController">
+    <stylesheets>
+        <URL value="@CSSCook.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="btnHoanThanh" layoutX="1255.0" layoutY="695.0" onAction="#btnHoanThanhClicked" prefHeight="58.0" prefWidth="177.0" style="-fx-background-color: #4ae872; -fx-background-radius: 20;" text="Đã hoàn thành" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/symantec_1024px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tbChiTietDonHang" layoutX="25.0" layoutY="139.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="150.0">
+        <columns>
+          <TableColumn fx:id="tbcMaMonAn" prefWidth="75.0" text="Mã món ăn" />
+          <TableColumn fx:id="tbcTenMonAn" prefWidth="75.0" text="Tên món ăn" />
+            <TableColumn fx:id="tbcSoLuong" prefWidth="75.0" text="Số lượng" />
+            <TableColumn fx:id="tbcGiaTien" prefWidth="75.0" text="Giá tiền" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="44.0" layoutY="44.0" prefHeight="97.0" prefWidth="1218.0" style="-fx-background-color: #ebd9d8; -fx-background-radius: 30;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" text="The Moon Restaurant">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="49.0" text="Thực hiện đơn hàng">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

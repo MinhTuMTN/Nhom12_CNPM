@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="851.0" prefWidth="1253.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.cashier.TiepNhanController">
+    <stylesheets>
+        <URL value="@CSSCashier.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="24.0" prefHeight="97.0" prefWidth="1218.0" style="-fx-background-color: #ebd9d8; -fx-background-radius: 30;" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" text="The Moon Restaurant">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="49.0" text="Tiếp nhận đặt trước">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbDatTruoc" layoutX="4.0" layoutY="150.0" onMouseClicked="#clickItemTableView" prefHeight="472.0" prefWidth="1209.0" AnchorPane.bottomAnchor="229.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+        <columns>
+            <TableColumn fx:id="tbcMaBan" minWidth="6.0" prefWidth="127.0" text="Mã bàn" />
+          <TableColumn fx:id="tbcHoTen" prefWidth="382.0" text="Họ tên" />
+          <TableColumn fx:id="tbcNgaySinh" prefWidth="194.0" text="Ngày sinh" />
+            <TableColumn fx:id="tbcSoDienThoai" prefWidth="174.0" text="Số điện thoại" />
+            <TableColumn fx:id="tbcSoLuongNguoi" prefWidth="156.0" text="Số lượng người" />
+            <TableColumn fx:id="tbcThoiGianDatTruoc" minWidth="0.0" prefWidth="175.0" text="Thời gian đặt trước" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="24.0" layoutY="653.0" prefHeight="39.0" prefWidth="127.0" text="Họ tên: " AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/name_tag_512px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="38.0" layoutY="702.0" text="Ngày sinh: " AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/birthday_date_512px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="38.0" layoutY="754.0" text="Số điện thoại: " AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/phone_512px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="602.0" layoutY="655.0" text="Mã bàn: " AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="600.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/table_512px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="602.0" layoutY="708.0" text="Số lượng người: " AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="600.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/people_512px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="602.0" layoutY="759.0" text="Thời gian đặt trước: " AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="600.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Icon/schedule_512px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXButton id="btnChapNhan" fx:id="btnTiepNhan" layoutX="951.0" layoutY="790.0" onAction="#btnTiepNhanClicked" style="-fx-background-color: #91ed97; -fx-background-radius: 30;" text="Chấp nhận" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="165.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnTuChoi" fx:id="btnTuChoi" layoutX="1102.0" layoutY="790.0" onAction="#btnTuChoiClicked" prefHeight="48.0" prefWidth="127.0" style="-fx-background-color: #f2305e; -fx-background-radius: 30;" styleClass="btnTuChoi" text="Từ chối" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="24.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblHoTen" layoutX="206.0" layoutY="647.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNgaySinh" layoutX="206.0" layoutY="699.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSoDienThoai" layoutX="206.0" layoutY="749.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="210.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSoBan" layoutX="818.0" layoutY="651.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="824.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSoLuongNguoi" layoutX="818.0" layoutY="701.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="824.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblThoiGianDatTruoc" layoutX="818.0" layoutY="749.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="824.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

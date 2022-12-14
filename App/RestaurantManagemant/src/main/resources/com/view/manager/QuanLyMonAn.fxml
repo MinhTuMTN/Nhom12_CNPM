@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="863.0" prefWidth="1374.0" stylesheets="@CSSManager.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.manager.QuanLyMonAnController">
+   <children>
+      <TableView fx:id="tbMonAn" layoutX="14.0" layoutY="121.0" onMouseClicked="#clickItemTableView" prefHeight="728.0" prefWidth="642.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="121.0">
+        <columns>
+          <TableColumn fx:id="tbcMaMonAn" editable="false" prefWidth="129.0" text="Mã món ăn" />
+          <TableColumn fx:id="tbcTenMonAn" editable="false" prefWidth="370.0" text="Tên món ăn" />
+            <TableColumn fx:id="tbcGiaTien" editable="false" prefWidth="142.0" text="Giá tiền" />
+            <TableColumn fx:id="tbcHinhAnh" editable="false" prefWidth="142.0" text="Hình ảnh" visible="false" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="1218.0" style="-fx-background-color: #ebd9d8; -fx-background-radius: 30;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <JFXTextField fx:id="txtTimKiem" layoutX="441.0" layoutY="26.0" prefHeight="46.0" prefWidth="707.0" promptText="Gõ tên hoặc mã món ăn để tìm kiếm" AnchorPane.leftAnchor="441.0" AnchorPane.rightAnchor="198.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="26.0" layoutY="14.0" text="The Moon Restaurant">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="49.0" text="Quản lý món ăn">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnTimKiem" layoutX="1181.0" layoutY="33.0" onAction="#btnTimKiemOnAction" prefHeight="46.0" prefWidth="129.0" style="-fx-background-radius: 20; -fx-background-color: #06bdb4; -fx-text-fill: white;" text="Tìm kiếm" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="33.0" />
+         </children>
+      </AnchorPane>
+      <JFXTabPane layoutX="675.0" layoutY="121.0" prefHeight="728.0" prefWidth="300.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="675.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="121.0">
+         <tabs>
+            <Tab closable="false" onSelectionChanged="#changeTab" text="Sửa thông tin món ăn">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnCapNhat" layoutX="416.0" layoutY="618.0" onAction="#btnCapNhatOnAction" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #043467; -fx-text-fill: white; -fx-background-radius: 20;" text="Sửa món ăn" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+                        <JFXTextField fx:id="txtUMaMonAn" disable="true" editable="false" labelFloat="true" layoutX="100.0" layoutY="33.0" prefHeight="46.0" prefWidth="549.0" promptText="Mã món ăn">
+                           <font>
+                              <Font size="22.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txtUTenMonAn" labelFloat="true" layoutX="93.0" layoutY="137.0" prefHeight="46.0" prefWidth="552.0" promptText="Tên món ăn">
+                           <font>
+                              <Font size="22.0" />
+                           </font></JFXTextField>
+                        <JFXTextField fx:id="txtUGiaTien" labelFloat="true" layoutX="93.0" layoutY="245.0" prefHeight="46.0" prefWidth="542.0" promptText="Giá tiền">
+                           <font>
+                              <Font size="22.0" />
+                           </font></JFXTextField>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="28.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_Qr_Code_512px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="28.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_rename_512px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="29.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_Price_Tag_USD_512px.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="93.0" layoutY="358.0" text="Hình ảnh (click vào hình để cập nhật)">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="29.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_picture_512px.png" />
+                           </image>
+                        </ImageView>
+                        <BorderPane layoutX="35.0" layoutY="414.0" prefHeight="249.0" prefWidth="419.0" style="-fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 3;">
+                           <center>
+                              <ImageView fx:id="picUHinhAnh" fitHeight="249.0" fitWidth="410.0" onMouseClicked="#picUHinhAnhClicked" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" onSelectionChanged="#changeTab" text="Thêm món ăn">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnThem" onAction="#btnThemOnAction" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #67CE75; -fx-text-fill: Black; -fx-background-radius: 20;" text="Thêm món ăn" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="21.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_Price_Tag_USD_512px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="21.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_rename_512px.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="txtIGiaTien" labelFloat="true" layoutX="82.0" layoutY="144.0" prefHeight="46.0" prefWidth="542.0" promptText="Giá tiền">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtITenMonAn" labelFloat="true" layoutX="77.0" layoutY="46.0" prefHeight="46.0" prefWidth="552.0" promptText="Tên món ăn">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </JFXTextField>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="21.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_picture_512px.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="82.0" layoutY="237.0" text="Hình ảnh">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <BorderPane layoutX="22.0" layoutY="297.0" prefHeight="249.0" prefWidth="419.0" style="-fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-width: 3;">
+                           <center>
+                              <ImageView fx:id="picIHinhAnh" fitHeight="249.0" fitWidth="342.0" onMouseClicked="#picUHinhAnhClicked" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

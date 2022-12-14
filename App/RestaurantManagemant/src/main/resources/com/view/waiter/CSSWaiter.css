@@ -1,0 +1,22 @@
+.btnFunction {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+.btnFunction:hover {
+    -fx-background-color: #f7bfbf;
+    -fx-border-width: 3;
+}
+.btnFunction-active {
+    -fx-background-color: #f7bfbf;
+    -fx-border-width: 3;
+}
+
+.table-view .table-cell, .table-header{
+    -fx-font-size: 17px; 
+}
+.table-row-cell:hover {
+    -fx-background-color:#9AE693;
+}
+.btnAdd:hover{
+    -fx-background-color: white;
+}

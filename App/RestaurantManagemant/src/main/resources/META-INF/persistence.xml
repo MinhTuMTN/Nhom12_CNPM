@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <persistence-unit name="jpaSQL">
+        <class>com.entity.Ban</class>
+        <class>com.entity.NhanVien</class>
+        <class>com.entity.DatTruoc</class>
+        <class>com.entity.KhachHang</class>
+        <class>com.entity.TaiKhoan</class>
+        <class>com.entity.CaTruc</class>
+        <class>com.entity.Luong</class>
+        <class>com.entity.Coupon</class>
+        <class>com.entity.DonHang</class>
+        <class>com.entity.MonAn</class>
+        <class>com.entity.ChiTietDonHang</class>
+        
+        <properties>
+
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:sqlserver://localhost:1433;databaseName=RestaurantManagement" />
+            <!--			<property name="javax.persistence.jdbc.url"
+            value="jdbc:mysql://remotemysql.com:3306/aWkmX9Y3zH" />-->
+            
+            <!--			<property name="javax.persistence.jdbc.driver"
+            value="com.mysql.jdbc.Driver" />-->
+            <property name="javax.persistence.jdbc.driver"
+                      value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+            
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <!--            <property name="javax.persistence.jdbc.user" value="aWkmX9Y3zH" />-->
+
+            <property name="javax.persistence.jdbc.password" value="3052" />
+            <!--            <property name="javax.persistence.jdbc.password" value="0ss5eKUX2T" />-->
+
+            <property name="hibernate.show_sql" value="false" />
+
+            <property name="hibernate.format_sql" value="false" />
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+            
+
+            <!--			<property name="hibernate.dialect"
+            value="org.hibernate.dialect.MySQL5Dialect" />-->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.SQLServerDialect" />
+        </properties>
+
+    </persistence-unit>
+    
+</persistence>
+
+

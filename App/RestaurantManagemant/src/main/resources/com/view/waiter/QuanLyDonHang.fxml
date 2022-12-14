@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1111.0" prefWidth="1920.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.waiter.QuanLyDonHangController">
+    <stylesheets>
+        <URL value="@CSSWaiter.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="34.0" layoutY="34.0" prefHeight="97.0" prefWidth="1218.0" style="-fx-background-color: #ebd9d8; -fx-background-radius: 30;" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" text="The Moon Restaurant">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="49.0" text="Quản lý đơn hàng">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbDonHang" layoutX="37.0" layoutY="142.0" onMouseClicked="#tbDonHangClicked" prefHeight="719.0" prefWidth="1275.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="145.0">
+        <columns>
+          <TableColumn fx:id="tbcHoTenKhachHang" prefWidth="75.0" text="Họ tên khách hàng" />
+            <TableColumn fx:id="tbcSoDienThoai" prefWidth="75.0" text="Số điện thoại" />
+            <TableColumn fx:id="tbcMaBan" prefWidth="75.0" text="Mã bàn" />
+            <TableColumn fx:id="tbcThoiGianCheckIn" prefWidth="75.0" text="Thời gian check-in" />
+            <TableColumn fx:id="tbcSoTienThanhToan" prefWidth="75.0" text="Số tiền thanh toán" />
+            <TableColumn fx:id="tbcTrangThaiDonHang" prefWidth="75.0" text="Trạng thái đơn hàng" />
+            <TableColumn fx:id="tbcDauBep" prefWidth="75.0" text="Đầu bếp" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="22.0" layoutY="872.0" prefHeight="216.0" prefWidth="1870.0" style="-fx-border-color: #aeb0af; -fx-border-width: 5; -fx-border-radius: 25;" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="28.0">
+         <children>
+            <JFXComboBox fx:id="cbMaBan" layoutX="1101.0" layoutY="122.0" prefHeight="31.0" prefWidth="305.0" AnchorPane.rightAnchor="464.0" AnchorPane.topAnchor="122.0" />
+            <Label layoutX="983.0" layoutY="131.0" text="Mã bàn:" AnchorPane.rightAnchor="803.0" AnchorPane.topAnchor="131.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnThem" layoutX="1616.0" layoutY="123.0" onAction="#btnThemClicked" prefHeight="46.0" prefWidth="197.0" style="-fx-background-color: #51f0a1; -fx-background-radius: 30;" styleClass="btnAdd" text="Thêm" textFill="WHITE" AnchorPane.bottomAnchor="44.0" AnchorPane.rightAnchor="57.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/Add%20properies_1024px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="129.0" layoutY="121.0" text="Loại khách hàng:" AnchorPane.leftAnchor="129.0" AnchorPane.topAnchor="121.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="84.0" prefWidth="1863.0" style="-fx-background-color: #aeb0af; -fx-background-radius: 20;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <children>
+                  <Label layoutX="21.0" layoutY="26.0" text="Tạo đơn hàng" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Group layoutX="438.0" layoutY="142.0">
+               <children>
+                  <HBox layoutX="-6.0" layoutY="-6.0" spacing="30.0">
+                     <children>
+                        <RadioButton fx:id="rbDatTruoc" layoutX="-6.0" layoutY="-6.0" mnemonicParsing="false" text="Đặt trước">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="groupRadio" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbThuong" mnemonicParsing="false" selected="true" text="Thường" toggleGroup="$groupRadio">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

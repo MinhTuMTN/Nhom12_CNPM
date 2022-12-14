@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="536.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.LoginController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="536.0" stylesheets="@LoginStyle.css">
+         <children>
+            <JFXTextField fx:id="txtUser" labelFloat="true" layoutX="50.0" layoutY="284.0" onKeyPressed="#keyPress" prefHeight="45.0" prefWidth="435.0" promptText="Tên đăng nhập">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></JFXTextField>
+            <JFXPasswordField fx:id="txtPass" labelFloat="true" layoutX="50.0" layoutY="374.0" onKeyPressed="#keyPress" prefHeight="45.0" prefWidth="435.0" promptText="Mật khẩu">
+               <font>
+                  <Font size="21.0" />
+               </font></JFXPasswordField>
+            <Label layoutX="50.0" layoutY="169.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="200.0" text="Welcome back,">
+               <font>
+                  <Font name="Ebrima Bold" size="21.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogin" layoutX="129.0" layoutY="483.0" onAction="#handleLogin" prefHeight="43.0" prefWidth="279.0" ripplerFill="#a86363" styleClass="btnLogin" text="Đăng nhập" textFill="#4b82a4">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="112.0" fitWidth="488.0" layoutX="160.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Logo/logo_big.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="207.0" text="Sign in to continue">
+               <font>
+                  <Font name="Ebrima" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNotification" layoutX="50.0" layoutY="428.0" styleClass="lblNotification" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

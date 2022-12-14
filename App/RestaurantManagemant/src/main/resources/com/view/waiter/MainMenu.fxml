@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="835.0" prefWidth="1213.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.waiter.MainMenuController">
+    <stylesheets>
+        <URL value="@CSSWaiter.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" prefHeight="552.0" prefWidth="152.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton id="btnCaTruc" fx:id="btnQuanLyDonHang" contentDisplay="TOP" onAction="#btnFunctionClick" prefHeight="150.0" prefWidth="162.0" ripplerFill="WHITE" styleClass="btnFunction" text="Quản lý đơn hàng" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/purchase_order_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnCaTruc" contentDisplay="TOP" onAction="#btnFunctionClick" prefHeight="144.0" prefWidth="157.0" ripplerFill="WHITE" styleClass="btnFunction" text="Đăng ký ca trực" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/calendar_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Separator layoutX="150.0" layoutY="57.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ff4f81;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="pnMain" layoutX="160.0" prefHeight="835.0" prefWidth="1053.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

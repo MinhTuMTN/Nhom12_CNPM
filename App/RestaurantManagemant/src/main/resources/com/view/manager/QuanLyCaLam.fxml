@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="863.0" prefWidth="1374.0" stylesheets="@CSSManager.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.manager.QuanLyCaLamController">
+   <children>
+      <TableView fx:id="tbCaTruc" layoutX="14.0" layoutY="121.0" onMouseClicked="#clickItemTableView" prefHeight="728.0" prefWidth="642.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="121.0">
+        <columns>
+          <TableColumn fx:id="tbcMaCaTruc" editable="false" prefWidth="129.0" text="Mã ca trực" />
+          <TableColumn fx:id="tbcNgayBatDau" editable="false" prefWidth="248.0" text="Ngày bắt đầu" />
+            <TableColumn fx:id="tbcNgayKetThuc" editable="false" prefWidth="264.0" text="Ngày kết thúc" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="97.0" prefWidth="1218.0" style="-fx-background-color: #ebd9d8; -fx-background-radius: 30;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="26.0" layoutY="14.0" text="The Moon Restaurant">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="49.0" text="Quản lý món ăn">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnTimKiem" layoutX="1181.0" layoutY="33.0" onAction="#btnTimKiemOnAction" prefHeight="46.0" prefWidth="129.0" style="-fx-background-radius: 20; -fx-background-color: #06bdb4; -fx-text-fill: white;" text="Tìm kiếm" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="33.0" />
+            <DatePicker fx:id="dtTimKiem" layoutX="767.0" layoutY="33.0" prefHeight="46.0" prefWidth="386.0" promptText="Chọn ngày để tìm kiếm" />
+         </children>
+      </AnchorPane>
+      <JFXTabPane layoutX="675.0" layoutY="121.0" prefHeight="728.0" prefWidth="300.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="675.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="121.0">
+         <tabs>
+            <Tab closable="false" onSelectionChanged="#changeTab" text="Tạo ca làm việc">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnTao" layoutX="461.0" layoutY="293.0" onAction="#btnThemOnAction" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #043467; -fx-text-fill: white; -fx-background-radius: 20;" text="Tạo ca" AnchorPane.bottomAnchor="339.0" AnchorPane.rightAnchor="72.0" />
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="51.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_calendar_1_48px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="51.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_calendar_31_48px.png" />
+                           </image>
+                        </ImageView>
+                        <DatePicker fx:id="dtNgayBDThem" layoutX="133.0" layoutY="65.0" onAction="#dtNgayBDThemChanged" prefHeight="46.0" prefWidth="464.0" promptText="Ngày bắt đầu" />
+                        <DatePicker fx:id="dtNgayKTThem" layoutX="124.0" layoutY="201.0" prefHeight="46.0" prefWidth="470.0" promptText="Ngày kết thúc" />
+                        <Label layoutX="52.0" layoutY="28.0" text="Ngày bắt đầu">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="165.0" text="Ngày kết thúc">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" onSelectionChanged="#changeTab" text="Chỉnh sửa ca làm việc">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnCapNhat" layoutX="461.0" layoutY="293.0" onAction="#btnCapNhatOnAction" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #043467; -fx-text-fill: white; -fx-background-radius: 20;" text="Cập nhật" AnchorPane.bottomAnchor="339.0" AnchorPane.rightAnchor="72.0" />
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="51.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_calendar_1_48px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="51.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Images/Icon/icons8_calendar_31_48px.png" />
+                           </image>
+                        </ImageView>
+                        <DatePicker fx:id="dtNgayBatDauSua" layoutX="133.0" layoutY="65.0" onAction="#dtNgayBatDauSuaChanged" prefHeight="46.0" prefWidth="464.0" promptText="Ngày bắt đầu" />
+                        <DatePicker fx:id="dtNgayKetThucSua" layoutX="124.0" layoutY="201.0" prefHeight="46.0" prefWidth="470.0" promptText="Ngày kết thúc" />
+                        <Label layoutX="52.0" layoutY="28.0" text="Ngày bắt đầu">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="165.0" text="Ngày kết thúc">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

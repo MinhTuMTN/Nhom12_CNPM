@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="692.0" prefWidth="1042.0" styleClass="mainFxmlClass" stylesheets="@CSSCook.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controller.cook.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="692.0" prefWidth="112.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton id="btnCaTruc" fx:id="btnXemDonHang" contentDisplay="TOP" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Xem đơn hàng" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" styleClass="btnFunction">
+                     <image>
+                        <Image url="@../../../Images/Icon/full_shopping_basket_1024px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton id="btnCaTruc" fx:id="btnCaTruc" contentDisplay="TOP" onAction="#btnFunctionClick" prefHeight="140.0" prefWidth="140.0" ripplerFill="WHITE" styleClass="btnFunction" text="Đăng ký ca trực" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/Icon/calendar_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Separator layoutX="106.0" layoutY="17.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #ff4f81;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="pnMain" layoutX="113.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="113.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

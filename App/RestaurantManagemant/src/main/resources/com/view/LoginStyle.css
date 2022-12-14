@@ -1,0 +1,12 @@
+.btnLogin{
+    -fx-background-color: #529bba;
+    -fx-background-radius: 30px;
+    -fx-text-fill: white;
+}
+.btnLogin:hover{
+    -fx-background-color: #7086b5;
+    -fx-text-fill: white;
+}
+.lblNotification{
+    -fx-text-fill: red;
+}

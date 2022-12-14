@@ -1,0 +1,39 @@
+.btnFunction {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+.btnFunction:hover {
+    -fx-background-color: #f7bfbf;
+    -fx-border-width: 3;
+}
+
+.btnFunction-active {
+    -fx-background-color: #f7bfbf;
+    -fx-border-width: 3;
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: white;
+    -fx-fill: black;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: white;
+}
+.tab-label {
+    -fx-text-fill: black;
+    -fx-pref-width: 200;
+    -fx-pref-height: 50;
+    -fx-alignment:center;
+/*    -fx-border-style: none solid none none;
+    -fx-border-width: 2;
+    -fx-border-color: black;*/
+}
+.jfx-tab-pane .tab-selected-line{
+    -fx-font-weight: bold;
+    -fx-background-color: green;
+    -fx-pref-height: 5;
+}
+.table-view .table-cell{
+    -fx-font-size:20px;
+}
